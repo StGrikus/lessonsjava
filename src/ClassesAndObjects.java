@@ -1,22 +1,24 @@
 public class ClassesAndObjects {
     public static void main(String[] args) {
         Person person1 = new Person();
-        person1.name = "Roman";
-        person1.age = 50;
+        //person1.name = "Roman"; не совсем правильный метод
+        person1.setNameAndAge("Roman", 50);
+        //person1.age = 50;
         person1.speak();
         //person1.calculateYearsToRetirement();
         int years1 = person1.calculateYearsToRetirement();
-        System.out.println("To Retirement "+years1);
+        //System.out.println("To Retirement "+years1);
         //не правильный метод System.out.println("My neame is "+person1.name+". "+"I have "+person1.age+" "+"years old");
         Person person2 = new Person();
-        person2.name = "Vova";
-        person2.age = 28;
+        person2.setNameAndAge("Vova", 28);
+        //person2.name = "Vova";
+        //person2.age = 28;
         //не правильный методSystem.out.println("My neame is "+person2.name+". "+"I have "+person2.age+" "+"years old");
         person2.speak();
-        //person2.calculateYearsToRetirement();
+        person2.calculateYearsToRetirement();
         person2.sayHello();
         int years2 = person2.calculateYearsToRetirement();
-        System.out.println("To Retirement "+years2);
+        //System.out.println("To Retirement "+years2);
 
     }
 }
@@ -27,6 +29,11 @@ class Person{
     //2.Действия которые он может выполнять(методы)
     String name;
     int age;
+
+    void setNameAndAge(String user_name, int user_age){
+        name = user_name;
+        age = user_age;
+    }
 
     int calculateYearsToRetirement(){   //годы до пенсии(перевод)
         int years = 65-age;
