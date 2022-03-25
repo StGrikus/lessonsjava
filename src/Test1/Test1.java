@@ -16,8 +16,8 @@ public class Test1 {
     }
 }
 class Person{
-    String name;
-    int age;
+    private String name;
+    private int age;
 
     void setNameAndAge(String user_name, int user_age){
         name = user_name;
