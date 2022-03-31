@@ -1,7 +1,7 @@
 public class Lessons24 { //String lessons
     public static void main(String[] args) {
-        String x = "Hello";
-        x = x.toUpperCase();
-        System.out.println(x);
+        StringBuilder sb = new StringBuilder("hello");
+        sb.append(" my").append(" friend");
+        System.out.println(sb.toString());
     }
 }
